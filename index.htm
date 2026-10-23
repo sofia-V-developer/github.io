@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>София Воропаева — разработчик</title>
-  <meta name="description" content="Портфолио Софии Воропаевой: Android, Python, Telegram-боты." />
+  <title>София Воропаева — разработчик и дизайнер</title>
+  <meta name="description" content="Портфолио Софии Воропаевой: Android, Python, Telegram-боты, веб-разработка и графический дизайн." />
   <style>
     :root {
       --bg: #0f1115;
@@ -36,13 +36,21 @@
       background: var(--card); border: 1px solid #232733;
       border-radius: 12px; padding: 20px;
       transition: border-color .2s, transform .2s;
+      display: flex; flex-direction: column;
     }
     .card:hover { border-color: var(--accent); transform: translateY(-2px); }
     .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-    .card p { color: var(--muted); font-size: .95rem; margin-bottom: 12px; }
-    .card a { color: var(--accent); text-decoration: none; font-size: .9rem; }
+    .card p { color: var(--muted); font-size: .95rem; margin-bottom: 12px; flex-grow: 1; }
+    .card a { color: var(--accent); text-decoration: none; font-size: .9rem; font-weight: 500; }
     .card a:hover { text-decoration: underline; }
-    .card .stack { font-size: .8rem; color: #6b7280; margin-top: 8px; }
+    .card .stack { font-size: .8rem; color: #6b7280; margin-top: 12px; }
+    
+    /* Стили для дизайна */
+    .design-showcase {
+      background: var(--card); border: 1px solid #232733;
+      border-radius: 12px; padding: 20px;
+    }
+    
     form { display: grid; gap: 12px; max-width: 480px; }
     label { font-size: .9rem; color: var(--muted); }
     input, textarea {
@@ -61,7 +69,6 @@
       padding: 40px 0; color: var(--muted); font-size: .85rem;
       border-top: 1px solid #232733;
     }
-    .status { font-size: .8rem; color: #f0b429; margin-top: 4px; }
   </style>
 </head>
 <body>
@@ -69,16 +76,17 @@
 
     <header>
       <h1>София Воропаева</h1>
-      <p class="subtitle">Разработчик: Android · Python · Telegram-боты</p>
-      <p>Делаю мобильные приложения и ботов. Люблю задачи, где нужно
-         соединить данные, интерфейс и автоматизацию.</p>
+      <p class="subtitle">Разработчик и дизайнер: Android · Web · Python · Иллюстрация</p>
+      <p>Создаю мобильные приложения, сайты и телеграм-боты. Уделяю внимание не только коду, но и дизайну, отрисовывая собственные иконки и интерфейсы.</p>
       <div class="tags">
         <span class="tag">Java</span>
         <span class="tag">Android</span>
-        <span class="tag">Room / SQLite</span>
+        <span class="tag">JavaScript</span>
         <span class="tag">Python</span>
+        <span class="tag">C++ / C#</span>
         <span class="tag">Telegram Bot API</span>
-        <span class="tag">MVVM</span>
+        <span class="tag">Room / SQLite</span>
+        <span class="tag">UI/UX & Иллюстрация</span>
       </div>
     </header>
 
@@ -87,18 +95,29 @@
       <div class="grid">
 
         <div class="card">
+          <h3>Дневник заикания</h3>
+          <p>Веб-приложение для наблюдения за прогрессом при заикании. Включает календарь отметок, аналитику и административную панель. Разработано для реального заказчика.</p>
+          <div class="stack">HTML · CSS · JavaScript</div>
+          <a href="https://logopedtv.ru/" target="_blank" rel="noopener">Открыть сайт →</a>
+        </div>
+
+        <div class="card">
           <h3>YGAD — умный журнал успеваемости</h3>
-          <p>Android-приложение для студентов и старост: оценки, средний балл,
-             предметы в зоне риска, добавление оценок по фото журнала (OCR),
-             светлая/тёмная тема.</p>
+          <p>Android-приложение для студентов и старост: оценки, средний балл, предметы в зоне риска, добавление оценок по фото журнала (OCR), светлая/тёмная тема.</p>
           <div class="stack">Java · Room · CameraX · Material Design 3 · MVVM</div>
           <a href="https://github.com/sofia-V-developer/YGAD" target="_blank" rel="noopener">GitHub →</a>
         </div>
 
         <div class="card">
+          <h3>EspanolV — испанский по видео</h3>
+          <p>Мобильное приложение для изучения испанского языка с использованием видеоуроков. Включает базу данных заметок и настроек (в активной разработке).</p>
+          <div class="stack">Kotlin · Android · Room</div>
+          <a href="https://github.com/sofia-V-developer/EspanolV" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+
+        <div class="card">
           <h3>Telegram-бот для конкурса</h3>
-          <p>Бот для проведения конкурса и акции с автоматической обработкой
-             заявок участников.</p>
+          <p>Бот для проведения конкурса и акции с автоматической обработкой заявок участников.</p>
           <div class="stack">Python · Telegram Bot API · Render</div>
           <a href="https://github.com/sofia-V-developer/tg_bot_render" target="_blank" rel="noopener">GitHub →</a>
         </div>
@@ -117,19 +136,18 @@
           <a href="https://github.com/sofia-V-developer/tg_bot" target="_blank" rel="noopener">GitHub →</a>
         </div>
 
-        <!-- Эти два показываем текстом, пока репозитории приватные -->
-        <div class="card">
-          <h3>Дневник заикания</h3>
-          <p class="status">Репозиторий пока приватный — демо по запросу.</p>
-          <div class="stack">Android · Java</div>
-        </div>
+      </div>
+    </section>
 
-        <div class="card">
-          <h3>EspanolV — испанский по видео</h3>
-          <p class="status">В разработке. Репозиторий пока приватный.</p>
-          <div class="stack">Android · Java</div>
+    <section>
+      <h2>Дизайн и графика</h2>
+      <div class="design-showcase">
+        <div>
+          <h3>Отрисовка иконок и аватарок</h3>
+          <p style="color: var(--muted); font-size: .95rem; margin-top: 8px;">
+            Помимо программирования я занимаюсь цифровым рисованием. Создаю векторные и растровые иконки, аватарки и элементы интерфейса для своих проектов. (Примеры работ скоро появятся здесь).
+          </p>
         </div>
-
       </div>
     </section>
 
@@ -138,8 +156,7 @@
       <p style="color: var(--muted); margin-bottom: 16px;">
         Напиши через форму — я отвечу и дам удобный контакт для переписки.
       </p>
-      <!-- Замени action на свой endpoint Formspree / Web3Forms -->
-      <form action="https://formspree.io/f/ВАШ_ID" method="POST">
+      <form action="https://formspree.io/f/mkjjwdep" method="POST">
         <div>
           <label for="name">Имя</label>
           <input id="name" name="name" required />
